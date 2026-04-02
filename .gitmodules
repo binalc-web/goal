@@ -1,0 +1,3 @@
+[submodule "binalc-web-hub"]
+	path = binalc-web-hub
+	url = https://github.com/binalc-web/hub.git
