@@ -64,3 +64,54 @@ export const suggestions = [
   { username: "design_ops", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Ops", reason: "Followed by maya" },
   { username: "infra", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Infra", reason: "Suggested for you" },
 ];
+
+export type ChatMessage = { id: string; from: "me" | "them"; text: string; timeLabel: string };
+
+export type MessageThread = {
+  id: string;
+  username: string;
+  avatar: string;
+  lastPreview: string;
+  timeLabel: string;
+  unread: number;
+  messages: ChatMessage[];
+};
+
+export const messageThreads: MessageThread[] = [
+  {
+    id: "t1",
+    username: "maya",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Maya",
+    lastPreview: "Sounds good — ship it tomorrow?",
+    timeLabel: "2m",
+    unread: 2,
+    messages: [
+      { id: "m1", from: "them", text: "Hey! Did you see the new feed layout?", timeLabel: "Yesterday" },
+      { id: "m2", from: "me", text: "Yes — looks clean. Stories row is smooth.", timeLabel: "Yesterday" },
+      { id: "m3", from: "them", text: "Sounds good — ship it tomorrow?", timeLabel: "2m" },
+    ],
+  },
+  {
+    id: "t2",
+    username: "alex",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex",
+    lastPreview: "Pushed a fix for the avatar overflow",
+    timeLabel: "1h",
+    unread: 0,
+    messages: [
+      { id: "m4", from: "them", text: "Pushed a fix for the avatar overflow", timeLabel: "1h" },
+      { id: "m5", from: "me", text: "Nice — pulling now.", timeLabel: "50m" },
+    ],
+  },
+  {
+    id: "t3",
+    username: "launchpad",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Launch",
+    lastPreview: "Welcome to Launchpad — mock data only for now.",
+    timeLabel: "3h",
+    unread: 0,
+    messages: [
+      { id: "m6", from: "them", text: "Welcome to Launchpad — mock data only for now.", timeLabel: "3h" },
+    ],
+  },
+];

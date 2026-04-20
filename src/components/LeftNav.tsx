@@ -1,9 +1,9 @@
 import { CompassIcon, CreateIcon, HeartIcon, HomeIcon, MessengerIcon, ReelsIcon, SearchIcon } from "./Icons";
 import type { Story } from "../data/mockData";
 
-type Props = { stories: Story[] };
+type Props = { stories: Story[]; activeView: "home" | "messages" };
 
-export function LeftNav({ stories }: Props) {
+export function LeftNav({ stories, activeView }: Props) {
   const logo = stories[0]?.avatar;
 
   return (
@@ -11,7 +11,10 @@ export function LeftNav({ stories }: Props) {
       <div className="leftNav__inner">
         <div className="leftNav__brand">Launchpad</div>
         <nav className="leftNav__links">
-          <a className="leftNav__link leftNav__link--active" href="#">
+          <a
+            className={"leftNav__link" + (activeView === "home" ? " leftNav__link--active" : "")}
+            href="#"
+          >
             <HomeIcon size={26} />
             <span>Home</span>
           </a>
@@ -27,7 +30,10 @@ export function LeftNav({ stories }: Props) {
             <ReelsIcon size={26} />
             <span>Reels</span>
           </a>
-          <a className="leftNav__link" href="#">
+          <a
+            className={"leftNav__link" + (activeView === "messages" ? " leftNav__link--active" : "")}
+            href="#messages"
+          >
             <MessengerIcon size={26} />
             <span>Messages</span>
           </a>
