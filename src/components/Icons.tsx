@@ -127,11 +127,3 @@ export function MessengerIcon({ size = 24, className }: IconProps) {
     </svg>
   );
 }
-
-export function ChevronLeftIcon({ size = 24, className }: IconProps) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
-      <path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
