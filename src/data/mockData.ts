@@ -59,50 +59,6 @@ export const posts: Post[] = [
   },
 ];
 
-export type MessageThread = {
-  id: string;
-  username: string;
-  avatar: string;
-  preview: string;
-  timeLabel: string;
-  unread: boolean;
-};
-
-export const messageThreads: MessageThread[] = [
-  {
-    id: "t1",
-    username: "maya",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Maya",
-    preview: "Sounds good — let’s sync tomorrow morning",
-    timeLabel: "2m",
-    unread: true,
-  },
-  {
-    id: "t2",
-    username: "alex",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex",
-    preview: "You: Pushed the preview build",
-    timeLabel: "1h",
-    unread: false,
-  },
-  {
-    id: "t3",
-    username: "launchpad",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Launch",
-    preview: "Weekly recap is live in the dashboard",
-    timeLabel: "Yesterday",
-    unread: false,
-  },
-  {
-    id: "t4",
-    username: "dev_team",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Dev",
-    preview: "CI green on main",
-    timeLabel: "2d",
-    unread: false,
-  },
-];
-
 export const suggestions = [
   { username: "product", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Product", reason: "New to Launchpad" },
   { username: "design_ops", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Ops", reason: "Followed by maya" },

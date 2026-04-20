@@ -1,22 +1,17 @@
 import { CompassIcon, CreateIcon, HeartIcon, HomeIcon, MessengerIcon, ReelsIcon, SearchIcon } from "./Icons";
-import type { AppView } from "../hooks/useHashView";
 import type { Story } from "../data/mockData";
 
-type Props = { stories: Story[]; activeView: AppView };
+type Props = { stories: Story[] };
 
-export function LeftNav({ stories, activeView }: Props) {
+export function LeftNav({ stories }: Props) {
   const logo = stories[0]?.avatar;
-  const homeActive = activeView === "home";
-  const messagesActive = activeView === "messages";
 
   return (
     <aside className="leftNav" aria-label="Main">
       <div className="leftNav__inner">
-        <a className="leftNav__brand" href="#">
-          Launchpad
-        </a>
+        <div className="leftNav__brand">Launchpad</div>
         <nav className="leftNav__links">
-          <a className={`leftNav__link${homeActive ? " leftNav__link--active" : ""}`} href="#" aria-current={homeActive ? "page" : undefined}>
+          <a className="leftNav__link leftNav__link--active" href="#">
             <HomeIcon size={26} />
             <span>Home</span>
           </a>
@@ -32,11 +27,7 @@ export function LeftNav({ stories, activeView }: Props) {
             <ReelsIcon size={26} />
             <span>Reels</span>
           </a>
-          <a
-            className={`leftNav__link${messagesActive ? " leftNav__link--active" : ""}`}
-            href="#messages"
-            aria-current={messagesActive ? "page" : undefined}
-          >
+          <a className="leftNav__link" href="#">
             <MessengerIcon size={26} />
             <span>Messages</span>
           </a>
