@@ -1,0 +1,4 @@
+
+[submodule "launchpad-frontend"]
+	path = launchpad-frontend
+	url = https://github.com/binalc-web/hub.git
